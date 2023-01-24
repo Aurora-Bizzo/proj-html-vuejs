@@ -1,0 +1,14 @@
+@import "src/styles/partials/variables";
+
+@mixin btn-green {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-transform: none;
+    background-color: $jungle-green;
+    color: #fff;
+    border: 1px solid $jungle-green;
+    padding: 14px 62px;
+    border-radius: 6px;
+}

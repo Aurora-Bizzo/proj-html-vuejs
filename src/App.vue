@@ -1,5 +1,4 @@
 <script>
-import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
@@ -8,17 +7,21 @@ export default {
   components: {
     AppHeader,
     AppMain,
-    AppFooter
+    AppFooter,
   }
 }
 </script>
 
 <template lang="">
   <div>
-    
+    <AppHeader/>
+    <AppMain/>
+    <AppFooter/>
   </div>
 </template>
 
-<style lang="">
-  
+<style lang="scss">
+  @use './styles/generals.scss' as *;
+  @use 'src/styles/generals' as *;
+  @use 'src/styles/partials/variables' as *;
 </style>
