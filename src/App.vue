@@ -2,26 +2,23 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
-
 export default {
   components: {
     AppHeader,
     AppMain,
-    AppFooter,
+    AppFooter
   }
 }
 </script>
 
 <template lang="">
-  <div>
-    <AppHeader/>
-    <AppMain/>
-    <AppFooter/>
-  </div>
+  <AppHeader/>
+  <AppMain/>
+  <AppFooter/>
 </template>
 
 <style lang="scss">
   @use './styles/generals.scss' as *;
-  @use 'src/styles/generals' as *;
-  @use 'src/styles/partials/variables' as *;
+  @use './styles/partials/mixin' as *;
+  @use './styles/partials/variables' as *;
 </style>

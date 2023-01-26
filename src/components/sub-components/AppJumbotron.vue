@@ -1,19 +1,14 @@
 <script>
-import VueKinesis from "vue-kinesis";
-import { KinesisContainer, KinesisElement} from "vue-kinesis";
 
 export default {
-    VueKinesis,
-    KinesisContainer,
-    KinesisElement
+    
 }
 </script>
 
 <template lang="">
     <div class="jumbotron w-100">
-        <div class="background"></div>
         <div class="container d-flex">
-            <div class="col-6">
+            <div class="col-4 padding">
                 <div class="content">
                     <div class="text">
                         <h5>I'M WINGMAN</h5>
@@ -25,8 +20,8 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="face-bg">
+            <div class="col-8">
+                <div class="bg-rose d-flex justify-content-end">
                     <img src="src\assets\img\home-movation-hero-image.png" alt="">
                 </div>
             </div>
@@ -35,32 +30,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use 'src/styles/partials/mixin' as *;
+@use '../../styles/partials/mixin' as *;
 
-.background {
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    display: block;
-    background-color: #F6F6FD;
-    background-image: url(https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2020/05/background-pattern-wavify.png);
-}
-
-.face-bg {
-    background-image: url("src/assets/img/home-movation-shape-face.png");
-    background-repeat: no-repeat;
-    background-position: 0px 130px;
-}
-
-.container {
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    padding: 137px 0px 0px 0px;
-}
 
 p {
     margin-top: 25px;
@@ -76,27 +47,27 @@ h5 {
 h1 {
     font-size: 3.8rem;
     font-family: Gilroy;
-    color: $vulcano;
 }
-.content {
-    padding: 70px 15px 70px 15px;
+.padding {
+    padding: 70px 15px 70px 0px;
 }
-
-.text {
-    width: 440px
+.jumbotron {
+    background-color: $amour;
+    padding-top: 145px;
+    background-image: url(https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2020/05/background-pattern-wavify.png);
 }
-
-.btn-div {
-    margin: 32px 0px 0px 0px;margin: 32px 0px 0px 0px;
+.bg-rose {
+    background-image: url(../../assets/img/home-movation-shape-face.png);
+    background-position: top 150px left 290px;
+    background-repeat: no-repeat;
 }
 
 button {
     @include btn-green;
-
-    i {
-        font-size: smaller;
-        margin-left: 5px;
-    }
 }
-    
+
+button:hover {
+    @include btn-green-hover;
+}
+
 </style>

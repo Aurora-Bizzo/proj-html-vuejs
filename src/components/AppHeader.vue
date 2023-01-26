@@ -1,6 +1,5 @@
 <script>
-import AppJumbotron from './sub-components/AppJumbotron.vue';
-
+import AppJumbotron from './sub-components/AppJumbotron.vue'
 export default {
     components: {
         AppJumbotron
@@ -16,25 +15,25 @@ export default {
 </script>
 
 <template lang="">
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <img class="logo" src="../assets/img/dark-logo.png" alt="">
+     <header class="vw-100">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-3 d-flex align-items-center">
+                    <img src="src\assets\img\dark-logo.png" alt="">
                 </div>
                 <div class="col-6">
-                    <ul>
+                    <ul class="h-100 d-flex justify-content-evenly align-items-center meteorite">
                         <li v-for="(item, index) in HeaderArray">
-                            {{ item }} <i class="fa-solid fa-angle-down"></i>
+                            {{ item }} <i class="fa-solid fa-angle-down arrow"></i>
                         </li>
                     </ul>
                 </div>
                 <div class="col-3">
-                    <ul>
+                    <ul class="h-100 d-flex align-items-center justify-content-end">
                         <li><i class="fa-brands fa-twitter"></i></li>
-                        <li><i class="fa-brands fa-facebook-f"></i></li>
-                        <li><i class="fa-brands fa-instagram"></i></li>
-                        <li><i class="fa-brands fa-linkedin"></i></li>
+                        <li><i class="fa-brands fa-facebook-f ps-4"></i></li>
+                        <li><i class="fa-brands fa-instagram ps-4"></i></li>
+                        <li><i class="fa-brands fa-linkedin ps-4"></i></li>
                     </ul>
                 </div>
             </div>
@@ -44,57 +43,31 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use 'src/styles/partials/variables' as *;
+@use '../styles/partials/variables' as *;
 
-    header {
-        width: 100%;
-        padding: 25px 0 15px 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        transition: all 1s;
-    }
+header {
+    height: 100px;
+    position: absolute;
+}
 
-    .logo {
-        max-width: 158px;
-    }
+img {
+    width: 158px;
+}
+    
+ul {
+    list-style-type: none;
+}
 
-    ul {
-        list-style-type: none;
-        display: flex;
-        padding: 0;
-    };
+.arrow {
+    font-size: 10px;
+}
 
-    .col-6 {
+i {
+    font-size: 19px;
+}
 
-        color: $meteorite;
-
-        ul {
-            justify-content: space-around;
-            font-weight: 600;
-        }
-
-        i {
-        font-size: 10px;
-        }
-    }
-
-    .col-3 {
-
-        ul {
-            justify-content: flex-end;
-        }
-
-        li{
-            margin-left: 25px;
-        }
-
-        i {
-            font-size: 20px;
-            color: $ebony-clay;
-        }
-
-    }
-
-
+.meteorite {
+    color: $meteorite;
+    font-weight: 500;
+}
 </style>

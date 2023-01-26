@@ -11,4 +11,10 @@
     border: 1px solid $jungle-green;
     padding: 14px 62px;
     border-radius: 6px;
+
+}
+
+@mixin btn-green-hover {
+    background-color: $meteorite;
+    border: 1px solid $meteorite; 
 }
